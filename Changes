@@ -1,5 +1,8 @@
 Revision history for MooseX-Types-Structured
 
+0.32    2015-03-28 21:39:38Z
+        - fix namespace cleaning with older MooseX::Types
+
 0.31    2015-03-28 21:08:14Z
         - various misc distribution and packaging cleanup
 

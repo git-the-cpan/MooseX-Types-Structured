@@ -7,7 +7,6 @@ use Devel::PartialDump;
 use Moose::Util::TypeConstraints ();
 use MooseX::Meta::TypeCoercion::Structured;
 extends 'Moose::Meta::TypeConstraint';
-use namespace::autoclean;
 
 
 #pod =head1 DESCRIPTION
@@ -357,6 +356,7 @@ around 'get_message' => sub {
 #pod
 #pod =cut
 
+no Moose;
 __PACKAGE__->meta->make_immutable(inline_constructor => 0);
 
 __END__
@@ -371,7 +371,7 @@ MooseX::Meta::TypeConstraint::Structured - Structured type constraints
 
 =head1 VERSION
 
-version 0.31
+version 0.32
 
 =for stopwords parameterize
 

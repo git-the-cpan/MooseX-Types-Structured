@@ -80,7 +80,7 @@ EOW
         "Robert Sedlacek <rs\@474.at>"
       ],
       "dist_name" => "MooseX-Types-Structured",
-      "dist_version" => "0.31",
+      "dist_version" => "0.32",
       "license" => "perl",
       "module_name" => "MooseX::Types::Structured",
       "recommends" => {},
@@ -96,7 +96,8 @@ EOW
         "Scalar::Util" => 0,
         "Sub::Exporter" => "0.982",
         "Sub::Exporter::ForMethods" => 0,
-        "namespace::autoclean" => 0,
+        "if" => 0,
+        "namespace::clean" => "0.08",
         "overload" => 0,
         "perl" => "5.008"
       },
@@ -111,7 +112,6 @@ EOW
         "Test::Fatal" => 0,
         "Test::More" => "0.88",
         "Test::Requires" => 0,
-        "if" => 0,
         "perl" => "5.008",
         "strict" => 0,
         "warnings" => 0
@@ -129,7 +129,6 @@ EOW
       "Test::Fatal" => 0,
       "Test::More" => "0.88",
       "Test::Requires" => 0,
-      "if" => 0,
       "perl" => "5.008",
       "strict" => 0,
       "warnings" => 0

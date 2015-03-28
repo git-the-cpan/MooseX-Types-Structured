@@ -3,7 +3,6 @@ package ## Hide from PAUSE
 
 use Moose;
 extends 'Moose::Meta::TypeCoercion';
-use namespace::autoclean;
 
 sub compile_type_coercion {
     my ($self) = @_;
@@ -22,6 +21,7 @@ sub add_type_coercions {
     Moose->throw_error("Cannot add additional type coercions to Optional types");
 }
 
+no Moose;
 __PACKAGE__->meta->make_immutable(inline_constructor => 0);
 
 1;

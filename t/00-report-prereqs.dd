@@ -110,7 +110,8 @@ do { my $x = {
                                       'Scalar::Util' => '0',
                                       'Sub::Exporter' => '0.982',
                                       'Sub::Exporter::ForMethods' => '0',
-                                      'namespace::autoclean' => '0',
+                                      'if' => '0',
+                                      'namespace::clean' => '0.08',
                                       'overload' => '0',
                                       'perl' => '5.008'
                                     }
@@ -129,7 +130,6 @@ do { my $x = {
                                    'Test::Fatal' => '0',
                                    'Test::More' => '0.88',
                                    'Test::Requires' => '0',
-                                   'if' => '0',
                                    'perl' => '5.008',
                                    'strict' => '0',
                                    'warnings' => '0'

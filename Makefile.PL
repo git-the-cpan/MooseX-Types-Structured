@@ -85,7 +85,8 @@ my %WriteMakefileArgs = (
     "Scalar::Util" => 0,
     "Sub::Exporter" => "0.982",
     "Sub::Exporter::ForMethods" => 0,
-    "namespace::autoclean" => 0,
+    "if" => 0,
+    "namespace::clean" => "0.08",
     "overload" => 0
   },
   "TEST_REQUIRES" => {
@@ -98,11 +99,10 @@ my %WriteMakefileArgs = (
     "Test::Fatal" => 0,
     "Test::More" => "0.88",
     "Test::Requires" => 0,
-    "if" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.31",
+  "VERSION" => "0.32",
   "test" => {
     "TESTS" => "t/*.t t/regressions/*.t"
   }
@@ -130,7 +130,7 @@ my %FallbackPrereqs = (
   "Test::More" => "0.88",
   "Test::Requires" => 0,
   "if" => 0,
-  "namespace::autoclean" => 0,
+  "namespace::clean" => "0.08",
   "overload" => 0,
   "strict" => 0,
   "warnings" => 0

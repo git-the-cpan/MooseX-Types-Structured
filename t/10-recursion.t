@@ -6,7 +6,7 @@ use warnings;
 use Test::More tests => 25;
 use Data::Dumper;
 
-BEGIN {
+{
     package Interpreter;
     use Moose;
     use Moose::Util::TypeConstraints;

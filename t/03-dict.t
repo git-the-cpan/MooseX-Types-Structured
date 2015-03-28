@@ -1,9 +1,7 @@
-BEGIN {
-    use strict;
-    use warnings;
-    use Test::More tests=>17;
-    use Test::Fatal;
-}
+use strict;
+use warnings;
+use Test::More tests=>17;
+use Test::Fatal;
 
 {
     package Test::MooseX::Meta::TypeConstraint::Structured::Dict;

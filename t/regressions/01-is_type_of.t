@@ -1,8 +1,6 @@
-BEGIN {
-    use strict;
-    use warnings;
-    use Test::More tests=>11;
-}
+use strict;
+use warnings;
+use Test::More tests=>11;
 
 {
     package TypeLib;

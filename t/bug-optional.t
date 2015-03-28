@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More;
 
-BEGIN {
+{
     package MyTypes;
     use MooseX::Types::Structured qw(Dict Tuple Optional);
     use MooseX::Types::Moose qw(Object Any);

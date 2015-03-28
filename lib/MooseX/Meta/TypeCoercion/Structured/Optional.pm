@@ -3,6 +3,7 @@ package ## Hide from PAUSE
 
 use Moose;
 extends 'Moose::Meta::TypeCoercion';
+use namespace::autoclean;
 
 sub compile_type_coercion {
     my ($self) = @_;

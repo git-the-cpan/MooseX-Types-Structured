@@ -1,8 +1,6 @@
-BEGIN {
-    use strict;
-    use warnings;
-    use Test::More tests=>16;
-}
+use strict;
+use warnings;
+use Test::More tests=>16;
 
 {
     package Test::MooseX::Meta::TypeConstraint::Structured::Coerce;

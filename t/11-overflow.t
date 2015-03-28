@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use Test::More tests=>12;
 
-use Moose::Util::TypeConstraints;
+use Moose::Util::TypeConstraints ();
 use MooseX::Types::Structured qw(Dict Tuple slurpy);
 use MooseX::Types::Moose qw(Int Str ArrayRef HashRef Object);
 

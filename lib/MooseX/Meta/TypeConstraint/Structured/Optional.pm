@@ -3,6 +3,7 @@ package ## Hide from PAUSE
 
 use Moose;
 use MooseX::Meta::TypeCoercion::Structured::Optional;
+use namespace::autoclean;
 
 extends 'Moose::Meta::TypeConstraint::Parameterizable';
 

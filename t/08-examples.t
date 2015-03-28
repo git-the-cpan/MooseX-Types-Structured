@@ -1,13 +1,8 @@
-BEGIN {
-    use strict;
-    use warnings;
-    use Test::More;
-
-    eval "use MooseX::Types::DateTime";
-    plan $@
-        ? ( skip_all => "Tests require MooseX::Types::DateTime" )
-        : ( tests => 10 );
-}
+use strict;
+use warnings;
+use Test::More;
+use Test::Requires 'MooseX::Types::DateTime';
+plan tests => 10;
 
 {
     ## Normalize a HashRef

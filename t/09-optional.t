@@ -3,7 +3,7 @@ use warnings;
 
 use Test::More tests=>46;
 use Test::Fatal;
-use Moose::Util::TypeConstraints;
+use Moose::Util::TypeConstraints ();
 use MooseX::Types::Structured qw(Optional);
 
 APITEST: {

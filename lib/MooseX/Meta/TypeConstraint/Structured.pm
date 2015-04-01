@@ -371,7 +371,7 @@ MooseX::Meta::TypeConstraint::Structured - Structured type constraints
 
 =head1 VERSION
 
-version 0.32
+version 0.33
 
 =for stopwords parameterize
 

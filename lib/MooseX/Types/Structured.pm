@@ -1,20 +1,19 @@
-package MooseX::Types::Structured; # git description: v0.31-3-g482b6ee
+package MooseX::Types::Structured; # git description: v0.32-5-gc057f58
 # ABSTRACT: Structured Type Constraints for Moose
-our $VERSION = '0.32';
-use 5.008;
 
+our $VERSION = '0.33';
+
+use 5.008;
 use Moose::Util::TypeConstraints 1.06 'find_type_constraint';
 use MooseX::Meta::TypeConstraint::Structured;
 use MooseX::Meta::TypeConstraint::Structured::Optional;
 use MooseX::Types::Structured::OverflowHandler;
 use MooseX::Types::Structured::MessageStack;
-use Sub::Exporter::ForMethods 'method_installer';
 use Devel::PartialDump 0.13;
 use Scalar::Util qw(blessed);
 use namespace::clean 0.08;
 use MooseX::Types 0.22 -declare => [qw(Dict Map Tuple Optional)];
 use Sub::Exporter 0.982 -setup => {
-    installer => method_installer,
     exports => [ qw(Dict Map Tuple Optional slurpy) ],
 };
 use if MooseX::Types->VERSION >= 0.42,
@@ -1016,7 +1015,7 @@ MooseX::Types::Structured - Structured Type Constraints for Moose
 
 =head1 VERSION
 
-version 0.32
+version 0.33
 
 =head1 SYNOPSIS
 

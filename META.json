@@ -105,14 +105,14 @@
             "Dist::Zilla::Plugin::Test::Version" : "0",
             "Dist::Zilla::Plugin::TestRelease" : "0",
             "Dist::Zilla::Plugin::UploadToCPAN" : "0",
-            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.076",
+            "Dist::Zilla::PluginBundle::Author::ETHER" : "0.086",
             "File::Spec" : "0",
             "IO::Handle" : "0",
             "IPC::Open3" : "0",
             "Pod::Weaver::Section::Contributors" : "0",
             "Test::CPAN::Changes" : "0.19",
             "Test::CPAN::Meta" : "0",
-            "Test::CleanNamespaces" : "0",
+            "Test::CleanNamespaces" : "0.15",
             "Test::EOL" : "0",
             "Test::Kwalitee" : "1.21",
             "Test::More" : "0.94",
@@ -134,7 +134,6 @@
             "MooseX::Types" : "0.22",
             "Scalar::Util" : "0",
             "Sub::Exporter" : "0.982",
-            "Sub::Exporter::ForMethods" : "0",
             "if" : "0",
             "namespace::clean" : "0.08",
             "overload" : "0",
@@ -164,7 +163,7 @@
    "provides" : {
       "MooseX::Types::Structured" : {
          "file" : "lib/MooseX/Types/Structured.pm",
-         "version" : "0.32"
+         "version" : "0.33"
       }
    },
    "release_status" : "stable",
@@ -182,7 +181,7 @@
       "x_IRC" : "irc://irc.perl.org/#moose",
       "x_MailingList" : "http://lists.perl.org/list/moose.html"
    },
-   "version" : "0.32",
+   "version" : "0.33",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.021010"
@@ -269,6 +268,7 @@
                "Dist::Zilla::Plugin::GatherDir" : {
                   "exclude_filename" : [
                      "README.pod",
+                     "TODO",
                      "CONTRIBUTING",
                      "LICENSE"
                   ],
@@ -281,13 +281,10 @@
                },
                "Dist::Zilla::Plugin::Git::GatherDir" : {
                   "include_untracked" : "0"
-               },
-               "Dist::Zilla::Role::Git::Repo" : {
-                  "repo_root" : "."
                }
             },
             "name" : "@Author::ETHER/Git::GatherDir",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::MetaYAML",
@@ -580,10 +577,14 @@
             "config" : {
                "Dist::Zilla::Plugin::AuthorityFromModule" : {
                   "module" : "MooseX::Types::Structured"
+               },
+               "Dist::Zilla::Role::ModuleMetadata" : {
+                  "Module::Metadata" : "1.000026",
+                  "version" : "0.002"
                }
             },
             "name" : "@Author::ETHER/AuthorityFromModule",
-            "version" : "0.004"
+            "version" : "0.006"
          },
          {
             "class" : "Dist::Zilla::Plugin::Authority",
@@ -745,10 +746,14 @@
                   "finder" : [
                      ":InstallModules"
                   ]
+               },
+               "Dist::Zilla::Role::ModuleMetadata" : {
+                  "Module::Metadata" : "1.000026",
+                  "version" : "0.002"
                }
             },
             "name" : "@Author::ETHER/CheckSelfDependency",
-            "version" : "0.010"
+            "version" : "0.011"
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterBuild",
@@ -761,7 +766,7 @@
                }
             },
             "name" : "@Author::ETHER/.ackrc",
-            "version" : "0.034"
+            "version" : "0.035"
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterBuild",
@@ -774,7 +779,7 @@
                }
             },
             "name" : "@Author::ETHER/.latest",
-            "version" : "0.034"
+            "version" : "0.035"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckStrictVersion",
@@ -797,7 +802,7 @@
                }
             },
             "name" : "@Author::ETHER/initial check",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts",
@@ -850,7 +855,7 @@
                }
             },
             "name" : "@Author::ETHER/after tests",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::CheckIssues",
@@ -902,7 +907,7 @@
                }
             },
             "name" : "@Author::ETHER/release snapshot",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Tag",
@@ -910,7 +915,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : 0,
-                  "tag" : "v0.32",
+                  "tag" : "v0.33",
                   "tag_format" : "v%v",
                   "tag_message" : "v%v%t",
                   "time_zone" : "local"
@@ -920,7 +925,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::Tag",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::GitHub::Update",
@@ -962,7 +967,7 @@
                }
             },
             "name" : "@Author::ETHER/post-release commit",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::Push",
@@ -978,7 +983,7 @@
                }
             },
             "name" : "@Author::ETHER/Git::Push",
-            "version" : "2.031"
+            "version" : "2.032"
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterRelease",
@@ -991,7 +996,7 @@
                }
             },
             "name" : "@Author::ETHER/install release",
-            "version" : "0.034"
+            "version" : "0.035"
          },
          {
             "class" : "Dist::Zilla::Plugin::Run::AfterRelease",
@@ -1004,7 +1009,7 @@
                }
             },
             "name" : "@Author::ETHER/release complete",
-            "version" : "0.034"
+            "version" : "0.035"
          },
          {
             "class" : "Dist::Zilla::Plugin::ConfirmRelease",
@@ -1037,10 +1042,14 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::CheckBreaks" : {
                   "conflicts_module" : "Moose::Conflicts"
+               },
+               "Dist::Zilla::Role::ModuleMetadata" : {
+                  "Module::Metadata" : "1.000026",
+                  "version" : "0.002"
                }
             },
             "name" : "Test::CheckBreaks",
-            "version" : "0.011"
+            "version" : "0.012"
          },
          {
             "class" : "Dist::Zilla::Plugin::FinderCode",

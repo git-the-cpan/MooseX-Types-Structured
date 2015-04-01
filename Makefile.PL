@@ -84,7 +84,6 @@ my %WriteMakefileArgs = (
     "MooseX::Types" => "0.22",
     "Scalar::Util" => 0,
     "Sub::Exporter" => "0.982",
-    "Sub::Exporter::ForMethods" => 0,
     "if" => 0,
     "namespace::clean" => "0.08",
     "overload" => 0
@@ -102,7 +101,7 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.32",
+  "VERSION" => "0.33",
   "test" => {
     "TESTS" => "t/*.t t/regressions/*.t"
   }
@@ -125,7 +124,6 @@ my %FallbackPrereqs = (
   "MooseX::Types::Moose" => 0,
   "Scalar::Util" => 0,
   "Sub::Exporter" => "0.982",
-  "Sub::Exporter::ForMethods" => 0,
   "Test::Fatal" => 0,
   "Test::More" => "0.88",
   "Test::Requires" => 0,

@@ -36,7 +36,7 @@ no_index:
 provides:
   MooseX::Types::Structured:
     file: lib/MooseX/Types/Structured.pm
-    version: '0.32'
+    version: '0.33'
 requires:
   Devel::PartialDump: '0.13'
   Moose: '0'
@@ -47,7 +47,6 @@ requires:
   MooseX::Types: '0.22'
   Scalar::Util: '0'
   Sub::Exporter: '0.982'
-  Sub::Exporter::ForMethods: '0'
   if: '0'
   namespace::clean: '0.08'
   overload: '0'
@@ -58,7 +57,7 @@ resources:
   bugtracker: https://rt.cpan.org/Public/Dist/Display.html?Name=MooseX-Types-Structured
   homepage: https://github.com/moose/MooseX-Types-Structured
   repository: https://github.com/moose/MooseX-Types-Structured.git
-version: '0.32'
+version: '0.33'
 x_Dist_Zilla:
   perl:
     version: '5.021010'
@@ -126,6 +125,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::GatherDir:
           exclude_filename:
             - README.pod
+            - TODO
             - CONTRIBUTING
             - LICENSE
           exclude_match: []
@@ -136,10 +136,8 @@ x_Dist_Zilla:
           root: .
         Dist::Zilla::Plugin::Git::GatherDir:
           include_untracked: '0'
-        Dist::Zilla::Role::Git::Repo:
-          repo_root: .
       name: '@Author::ETHER/Git::GatherDir'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::MetaYAML
       name: '@Author::ETHER/MetaYAML'
@@ -369,8 +367,11 @@ x_Dist_Zilla:
       config:
         Dist::Zilla::Plugin::AuthorityFromModule:
           module: MooseX::Types::Structured
+        Dist::Zilla::Role::ModuleMetadata:
+          Module::Metadata: '1.000026'
+          version: '0.002'
       name: '@Author::ETHER/AuthorityFromModule'
-      version: '0.004'
+      version: '0.006'
     -
       class: Dist::Zilla::Plugin::Authority
       name: '@Author::ETHER/Authority'
@@ -488,8 +489,11 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::CheckSelfDependency:
           finder:
             - ':InstallModules'
+        Dist::Zilla::Role::ModuleMetadata:
+          Module::Metadata: '1.000026'
+          version: '0.002'
       name: '@Author::ETHER/CheckSelfDependency'
-      version: '0.010'
+      version: '0.011'
     -
       class: Dist::Zilla::Plugin::Run::AfterBuild
       config:
@@ -498,7 +502,7 @@ x_Dist_Zilla:
           run:
             - "bash -c \"test -e .ackrc && grep -q -- '--ignore-dir=.latest' .ackrc || echo '--ignore-dir=.latest' >> .ackrc; if [[ `dirname %d` != .build ]]; then test -e .ackrc && grep -q -- '--ignore-dir=%d' .ackrc || echo '--ignore-dir=%d' >> .ackrc; fi\""
       name: '@Author::ETHER/.ackrc'
-      version: '0.034'
+      version: '0.035'
     -
       class: Dist::Zilla::Plugin::Run::AfterBuild
       config:
@@ -507,7 +511,7 @@ x_Dist_Zilla:
             - "if ('%d' =~ /^%n-[.[:xdigit:]]+$/) { unlink '.latest'; symlink '%d', '.latest'; }"
           fatal_errors: 1
       name: '@Author::ETHER/.latest'
-      version: '0.034'
+      version: '0.035'
     -
       class: Dist::Zilla::Plugin::CheckStrictVersion
       name: '@Author::ETHER/CheckStrictVersion'
@@ -524,7 +528,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/initial check'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::MergeConflicts
       config:
@@ -563,7 +567,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/after tests'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::CheckIssues
       name: '@Author::ETHER/CheckIssues'
@@ -602,21 +606,21 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/release snapshot'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::Git::Tag
       config:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: v0.32
+          tag: v0.33
           tag_format: v%v
           tag_message: v%v%t
           time_zone: local
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Tag'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::GitHub::Update
       name: '@Author::ETHER/GitHub::Update'
@@ -647,7 +651,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/post-release commit'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::Git::Push
       config:
@@ -658,7 +662,7 @@ x_Dist_Zilla:
         Dist::Zilla::Role::Git::Repo:
           repo_root: .
       name: '@Author::ETHER/Git::Push'
-      version: '2.031'
+      version: '2.032'
     -
       class: Dist::Zilla::Plugin::Run::AfterRelease
       config:
@@ -667,7 +671,7 @@ x_Dist_Zilla:
           run:
             - REDACTED
       name: '@Author::ETHER/install release'
-      version: '0.034'
+      version: '0.035'
     -
       class: Dist::Zilla::Plugin::Run::AfterRelease
       config:
@@ -676,7 +680,7 @@ x_Dist_Zilla:
             - 'print "release complete!\xa"'
           fatal_errors: 1
       name: '@Author::ETHER/release complete'
-      version: '0.034'
+      version: '0.035'
     -
       class: Dist::Zilla::Plugin::ConfirmRelease
       name: '@Author::ETHER/ConfirmRelease'
@@ -702,8 +706,11 @@ x_Dist_Zilla:
       config:
         Dist::Zilla::Plugin::Test::CheckBreaks:
           conflicts_module: Moose::Conflicts
+        Dist::Zilla::Role::ModuleMetadata:
+          Module::Metadata: '1.000026'
+          version: '0.002'
       name: Test::CheckBreaks
-      version: '0.011'
+      version: '0.012'
     -
       class: Dist::Zilla::Plugin::FinderCode
       name: ':InstallModules'

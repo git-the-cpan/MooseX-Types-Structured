@@ -4,7 +4,6 @@ package ## Hide from PAUSE
 
 use Moose;
 use Devel::PartialDump;
-use Moose::Util::TypeConstraints ();
 use MooseX::Meta::TypeCoercion::Structured;
 extends 'Moose::Meta::TypeConstraint';
 
@@ -371,7 +370,7 @@ MooseX::Meta::TypeConstraint::Structured - Structured type constraints
 
 =head1 VERSION
 
-version 0.33
+version 0.34
 
 =for stopwords parameterize
 

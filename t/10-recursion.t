@@ -9,7 +9,6 @@ use Data::Dumper;
 {
     package Interpreter;
     use Moose;
-    use Moose::Util::TypeConstraints;
     use MooseX::Types::Structured qw(Dict Tuple);
     use MooseX::Types::Moose qw(
         Int

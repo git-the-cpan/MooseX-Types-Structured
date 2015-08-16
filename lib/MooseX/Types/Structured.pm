@@ -1,7 +1,7 @@
-package MooseX::Types::Structured; # git description: v0.32-5-gc057f58
+package MooseX::Types::Structured; # git description: v0.33-9-g3abcc09
 # ABSTRACT: Structured Type Constraints for Moose
 
-our $VERSION = '0.33';
+our $VERSION = '0.34';
 
 use 5.008;
 use Moose::Util::TypeConstraints 1.06 'find_type_constraint';
@@ -11,7 +11,7 @@ use MooseX::Types::Structured::OverflowHandler;
 use MooseX::Types::Structured::MessageStack;
 use Devel::PartialDump 0.13;
 use Scalar::Util qw(blessed);
-use namespace::clean 0.08;
+use namespace::clean 0.19;
 use MooseX::Types 0.22 -declare => [qw(Dict Map Tuple Optional)];
 use Sub::Exporter 0.982 -setup => {
     exports => [ qw(Dict Map Tuple Optional slurpy) ],
@@ -1015,7 +1015,7 @@ MooseX::Types::Structured - Structured Type Constraints for Moose
 
 =head1 VERSION
 
-version 0.33
+version 0.34
 
 =head1 SYNOPSIS
 
@@ -1735,13 +1735,6 @@ Robert Sedlacek <rs@474.at>
 
 =back
 
-=head1 COPYRIGHT AND LICENSE
-
-This software is copyright (c) 2008 by John Napiorkowski.
-
-This is free software; you can redistribute it and/or modify it under
-the same terms as the Perl 5 programming language system itself.
-
 =head1 CONTRIBUTORS
 
 =for stopwords Karen Etheridge Ricardo Signes Dave Rolsky Ansgar Burchardt Stevan Little arcanez Jesse Luehrs
@@ -1777,5 +1770,12 @@ arcanez <justin.d.hunter@gmail.com>
 Jesse Luehrs <doy@tozt.net>
 
 =back
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2008 by John Napiorkowski.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut

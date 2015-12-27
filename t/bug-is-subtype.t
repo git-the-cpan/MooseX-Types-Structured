@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More;
+use Test::More 0.88;
 
 ## Bug report was that if calling ->is_subtype on crap (not a type, etc) you
 ## get a not very helpful error message.  Fix was to make crap just return

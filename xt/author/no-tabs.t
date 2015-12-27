@@ -45,13 +45,13 @@ my @files = (
     'xt/author/mojibake.t',
     'xt/author/no-tabs.t',
     'xt/author/pod-spell.t',
+    'xt/author/pod-syntax.t',
     'xt/author/test-version.t',
     'xt/release/changes_has_content.t',
     'xt/release/cpan-changes.t',
     'xt/release/distmeta.t',
     'xt/release/minimum-version.t',
     'xt/release/pod-no404s.t',
-    'xt/release/pod-syntax.t',
     'xt/release/portability.t'
 );
 

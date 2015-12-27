@@ -14,7 +14,7 @@ has type_constraint => (
 
 sub name {
     my ($self) = @_;
-    return 'slurpy ' . $self->type_constraint->name;
+    return 'slurpy(' . $self->type_constraint->name . ')';
 }
 
 no Moose;

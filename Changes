@@ -1,5 +1,8 @@
 Revision history for MooseX-Types-Structured
 
+0.35    2015-12-27 00:32:49Z
+        - avoid spaces in slurpy type constraint names (ilmari, PR#1)
+
 0.34    2015-08-16 02:39:14Z
         - bump namespace::clean prereq
 

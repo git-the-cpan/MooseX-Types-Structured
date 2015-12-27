@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use Test::More;
+use Test::More 0.88;
 
 use Moose::Util::TypeConstraints;
 use MooseX::Types::Structured qw(Dict Tuple Optional);
